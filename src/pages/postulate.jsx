@@ -4,6 +4,9 @@ import axios from "axios";
 /** Alertas con React Toastify */
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+/*Importar estilos css */
+import "../assets/css/postulate.css"
+
 
 const Postulate = () => {
 const [trabajo,setTrabajo]=useState([]);
@@ -186,11 +189,16 @@ const navigate = useNavigate();
  <div className="col-12 col-sm-12 ">
  <div className="mb-3">
   <label className="form-label">Adjunte CV (Word/Pdf)</label>
-  <input className="form-control" type="file" id="formFile"
+<div className="form-group files color">
+<input className="form-control" type="file" id="formFile"
+  accept=".pdf,.docx " 
   onChange={(e)=>setArchivoPdf(e.target.files)}
   required
   />
 </div>
+
+</div>
+
  </div>
 </div>
 
